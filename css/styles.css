@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-body: #181823;
+    --bg: #537FE7;
+    --font-family:'Golos Text', sans-serif;
+    --title-color: #E9F8F9;
+}
+html,body,input,button{
+    font-family: var(--font-family);
+}
+
+body{
+    background-color: var(--bg-body);
+}
+
+.title-main{
+    text-align: center;
+    color: #537FE7;
+    margin: 1rem 0;
+}
+
+/*-------------------- RANDOM SECTION ---------------------------*/
+
+
+.random-cat__section{
+    margin: 3rem 0 0 0;
+}
+
+
+.random-cat__title{
+    color: var(--title-color);
+    font-size: 2rem;
+    margin: 1.5rem 0 0 6rem;
+}
+
+.random-cat__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 2rem;
+}
+
+.random-cat__article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: opacity 800ms ease;
+}
+
+
+.random-cat__image{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    transition: opacity 800ms ease;
+    border-radius: 20%;
+}
+
+.random-cat__button-favorite{
+    background: transparent;
+    border: none;
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 3rem;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    transition: all 800ms ease;
+    width: 100px;
+    height: 100px;
+}
+
+
+.random-cat__article:hover > .random-cat__button-favorite{
+    visibility: visible;
+    opacity: 1;
+}
+
+.random-cat__article:hover > .random-cat__image{
+    opacity: 0.5;
+}
+
+.random-cat__container--button-change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ButtonChange{
+    background-color: var(--bg);
+    border: none;
+    border-radius: .3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    padding: 1rem ;
+    transition: transform 800ms ease;
+}
+#ButtonChange:hover{
+    transform: scale(1.1);
+}
+
+
+
+/*-------------------- FAVORITE SECTION ---------------------------*/
+
+
+.favorite-cat__section{
+    margin: 3rem 0 0 0;
+}
+.favorite-cat__title{
+    margin: 1rem 0 0 0;
+    color: var(--title-color);
+    font-size: 2rem;
+    margin: 0 0 0 6rem;
+}
+.favorite-cat__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 2rem;
+}
+.favorite-cat__article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.favorite-cat__image{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+}
+.favorite-cat__button-favorite{
+    background-color: var(--bg);
+    border: none;
+    border-radius: .3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    padding: .5rem ;
+    transition: transform 800ms ease;
+    margin: 1rem 0 0 0;
+}
+.favorite-cat__button-favorite:hover{
+    transform: scale(1.1);
+}
+
+
+/*-------------------- UPLOAD SECTION ---------------------------*/
+
+
+.upload-cat__section{
+    margin: 5rem 0;
+}
+.upload-cat__title{
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+.upload-cat__form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-cat__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upload-cat__input{
+    background-color: var(--bg);
+    border-radius: .3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    padding: 1rem ;
+    transition: transform 800ms ease;
+    margin: 1rem 0;
+    width: 100%;
+}
+::-webkit-file-upload-button{
+    background: var(--bg-body);
+    border: none;
+    border-radius: .3rem;
+    color: var(--title-color);
+    padding: .5rem;
+}
+.upload-cat__button{
+    background-color: var(--bg);
+    border: none;
+    border-radius: .3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    padding: .5rem ;
+    transition: transform 800ms ease;
+    margin: 1rem 0 0 0;
+}
+.upload-cat__button:hover{
+    transform: scale(1.1);
+}
+  
+.img-preview{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+}

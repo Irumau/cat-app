@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/ddec7cb4f9.js" crossorigin="anonymous"></script>
+    <title>Cats Page</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="5" height="5"></canvas>
+
+    <h1 class="title-main">CAT APP</h1>
+
+    <span id="errorCat"></span>
+
+
+    
+    <section class="random-cat__section"  id="randomCats">
+        <h2 class="random-cat__title">Random Cats</h2>
+        <div class="random-cat__container">
+            <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+            </article>
+    
+            <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+            </article>
+    
+            <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+             
+             <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+             <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+             <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+             <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+             <article class="random-cat__article">
+                <img class="random-cat__image" id="img" alt="">
+                <button class="random-cat__button-favorite" id="favoriteButton"><i class="fa-solid fa-star"></i></button>
+             </article>
+
+        </div>
+        <div class="random-cat__container--button-change">
+            <button id="ButtonChange">Reload Cats</button>
+        </div>
+    </section>
+
+    <section class="upload-cat__section" id="uploadingCat">
+        <h2 class="upload-cat__title">Upload your own Cat</h2>
+        <div class="upload-cat__form-container">
+            <form class="upload-cat__form" id="uploadingForm">
+                <input class="upload-cat__input" id="selectFile" type="file" name="file"/>
+                <br>
+                <img id="preview">
+                <button class="upload-cat__button" type="button" id="uploadPictureCat">Upload your own Cat</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="favorite-cat__section" id="favoriteCats">
+        <h2 class="favorite-cat__title">Favorite Cats</h2>
+        <div class="favorite-cat__container" id="favoriteCatsContainer">
+
+        </div>
+    </section>
+
+
+
+
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
