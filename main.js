@@ -11,6 +11,7 @@ const API_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
 const API_KEY = 'live_J9shTIRvFMADGXyAFerDIn1Wxg61dCPJ7GME27JrhWgoIaYaGwUyk6IKYmSojjxS';
 
 
+
 async function FetchData(URL) {
     const response = await fetch(URL);
     if (response.status !== 200) {
@@ -20,22 +21,26 @@ async function FetchData(URL) {
         return data;
     }
 };
+
 const getRandomDataCat = async () => {
     const dataCat = await FetchData(API_RANDOM);
     const imgArray = [...img];
-    imgArray.map((cat, id) => {
-        cat.src = dataCat[id].url;
-    })
     const favoriteButtonArray = [...favoriteButton];
-    favoriteButtonArray.map((button, index) => {
-        button.addEventListener('click', () => {
-            saveFavoriteDataCat(dataCat[index].id);
-        })
+
+
+    imgArray.forEach((cat,index) => {
+        cat.src = dataCat[index].url;
     })
+
+    favoriteButtonArray.forEach((cat,index) =>{
+        cat.onclick = () => saveFavoriteDataCat(dataCat[index].id);
+    })    
 };
+
 buttonChange.addEventListener('click', () => {
     getRandomDataCat();
 });
+
 const saveFavoriteDataCat = async (id) => {
     const response = await fetch(API_FAVORITE, {
         method: "POST",
@@ -69,7 +74,6 @@ async function loadFavoriteDataCats() {
     } else {
         const divContainer = document.getElementById('favoriteCatsContainer');
         divContainer.innerHTML = "";
-
         data.map((cat) => {
             const article = document.createElement('article');
             const img = document.createElement('img');
@@ -132,13 +136,12 @@ async function uploadPictureCat() {
         saveFavoriteDataCat(data.id)
     }
 };
+
 btnUploadPictureCat.addEventListener('click', () => {
     uploadPictureCat();
     imgPreview.src = ''
     imgPreview.classList.remove('img-preview');
 });
-
-
 
 const selectFile = document.getElementById('selectFile');
 const imgPreview = document.getElementById('preview')
